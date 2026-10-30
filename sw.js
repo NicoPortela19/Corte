@@ -1,6 +1,6 @@
 /* Corte · service worker: funciona sin conexión (cache primero, actualiza en segundo plano) */
-const VERSION = 'corte-v1';
-const ARCHIVOS = ['./', './index.html', './manifest.json', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png', './icons/apple-touch-icon.png'];
+const VERSION = 'corte-v2';
+const ARCHIVOS = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png', './icon-maskable-512.png', './apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(ARCHIVOS)));
